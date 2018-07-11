@@ -1,0 +1,2 @@
+! BGP session with router 1
+id=100.100.100.254 ip=100.100.100.100

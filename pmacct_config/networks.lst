@@ -1,0 +1,77 @@
+!
+! Sample networks-list; enabled by 'networks_file' key.
+!
+! Format supported: [<label>','][<next-hop>','][[<peer AS number>'_']<origin AS number>',']<Network>'/'<numeric mask>
+!
+!###### type list
+!
+!###############################################################################################################
+!##### type 1
+! <Network>'/'<numeric mask> examples
+!ex)
+!1.0.128.0/24
+!1.0.129.0/24
+!
+!##### type 2
+! <origin AS number>','<Network>'/'<numeric mask> examples
+!ex)
+!23969,1.0.128.0/24
+!23969,1.0.129.0/24
+!
+!##### type 3
+! <peer AS number>'_'<origin AS number>','<Network>'/'<numeric mask> examples
+!ex)
+!64512_65500,192.168.1.0/24
+!64512_65501,192.168.2.0/25
+!64512_65502,192.168.4.0/23
+!
+!##### type 4
+! <next-hop>','<origin AS number>','<Network>'/'<numeric mask> examples
+!ex)
+!10.0.0.1,65500,192.168.1.0/24
+!10.0.0.2,65501,192.168.2.0/25
+!10.0.0.3,65502,192.168.4.0/23
+!
+!##### type 5
+! <label>','<Network>'/'<numeric mask> examples
+! NOTE: labels can be up to 15 characters long.
+!
+!ex)
+!CustID#1,,,100.100.48.0/24
+!CustID#2,,,192.168.2.0/25
+!CustID#3,,,192.168.4.0/23
+!
+!###############################################################################################################
+!
+!
+!
+!##### type 1
+! <Network>'/'<numeric mask> examples
+!
+#1.0.128.0/24
+#1.0.129.0/24
+...bla....bla`
+63199,223.255.251.0/24
+!
+!
+!##### type 3
+! <peer AS number>'_'<origin AS number>','<Network>'/'<numeric mask> examples
+!
+!64512_65500,192.168.1.0/24
+!64512_65501,192.168.2.0/25
+!64512_65502,192.168.4.0/23
+!
+!##### type 4
+! <next-hop>','<origin AS number>','<Network>'/'<numeric mask> examples
+!
+!10.0.0.1,65500,192.168.1.0/24
+!10.0.0.2,65501,192.168.2.0/25
+!10.0.0.3,65502,192.168.4.0/23
+!
+!##### type 5
+! <label>','<Network>'/'<numeric mask> examples
+! NOTE: labels can be up to 15 characters long.
+!
+!CustID#1,,,100.100.48.0/24
+!CustID#2,,,192.168.2.0/25
+!CustID#3,,,192.168.4.0/23

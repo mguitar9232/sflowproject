@@ -1,0 +1,23 @@
+CREATE TABLE `acct_bgp` (
+  `agent_id` int(4) unsigned NOT NULL,
+  `as_src` int(4) unsigned NOT NULL DEFAULT 0,
+  `as_dst` int(4) unsigned NOT NULL DEFAULT 0,
+  `peer_as_src` int(4) unsigned NOT NULL DEFAULT 0,
+  `peer_as_dst` int(4) unsigned NOT NULL DEFAULT 0,
+  `peer_ip_src` char(15) NOT NULL,
+  `peer_ip_dst` char(15) NOT NULL,
+  `comms` char(24) NOT NULL DEFAULT ' ',
+  `as_path` char(21) NOT NULL,
+  `local_pref` int(4) unsigned NOT NULL,
+  `med` int(4) unsigned NOT NULL  DEFAULT 0,
+  `packets` int(10) unsigned NOT NULL,
+  `bytes` bigint(20) unsigned NOT NULL,
+  `stamp_inserted` datetime NOT NULL,
+  `stamp_updated` datetime DEFAULT NULL,
+  `timestamp_min` datetime NOT NULL DEFAULT 0,
+  `timestamp_max` datetime NOT NULL DEFAULT 0,
+  `timestamp_min_residual` datetime NOT NULL DEFAULT 0,
+  `timestamp_max_residual` datetime NOT NULL DEFAULT 0,
+  PRIMARY KEY (`agent_id`,`as_src`,`as_dst`,`peer_as_src`,`peer_as_dst`,`peer_ip_src`,`peer_ip_dst`,`comms`,`as_path`,`local_pref`,`med`,`stamp_inserted`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
